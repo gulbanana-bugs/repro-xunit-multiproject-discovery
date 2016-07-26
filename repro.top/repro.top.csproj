@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F131308C-6923-4B5B-B326-49A2DB48B2A2}</ProjectGuid>
+    <ProjectGuid>{242AB9E3-8702-4FA2-9AA3-DD5B7D10BB81}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>repro.bottom</RootNamespace>
-    <AssemblyName>repro.bottom</AssemblyName>
+    <RootNamespace>repro.top</RootNamespace>
+    <AssemblyName>repro.top</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractTest.cs" />
     <Compile Include="ConcreteTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -49,7 +48,10 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+    <ProjectReference Include="..\repro.bottom\repro.bottom.csproj">
+      <Project>{f131308c-6923-4b5b-b326-49a2db48b2a2}</Project>
+      <Name>repro.bottom</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
